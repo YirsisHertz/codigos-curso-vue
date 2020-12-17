@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hola Mundo Vue</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="(movie, index) in user.movies" :key="index">
+          {{index}} = {{movie}}
+        </li>
+      </ul>
+
+      <!-- <h1 v-if="user.age <= 0 || user.age > 110" class="rango_err">
+        Tu edad, esta fuera de rango, verificala.
+      </h1>
+
+      <h1 v-else-if=" user.age >= 18 " class="good">Eres mayor de edad</h1>
+
+      <h1 v-if="user.age  18" class="good">Eres Mayor de edad</h1
+      <h1 v-else class="error">Eres Menor de edad</h1> -->
+      <!-- <h1 :class="user.classValue">{{user.title}}</h1> -->
+      <!-- <h1>{{user.title}}</h1>
+      <h2>{{ user.age < 18 ? "No puedes pasar" : "Puedes pasar" }}</h2>
+
+      <hr />
+
+      <a v-bind:href="user.url" target="_blank">Google</a>
+
+      <hr />
+
+      <img :src="user.picture" width="300" height="300" /> -->
+    </div>
+
+    <script src="./main.js"></script>
+
+    <script>
+      const mountApp = app.mount("#app");
+    </script>
+  </body>
+</html>
