@@ -8,7 +8,28 @@
       content="Generador de Degradados para CSS en tiempo Real y hecho en el curso de Vue 3"
     />
 
+    <!-- Metadata para PWA -->
+    <!-- Modificar color barra de estado ANDROID -->
+    <meta name="theme-color" content="#f5f5dc" />
+    <!-- Optimizaciones de SEO -->
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <!-- Modificar Barra de estado IOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
     <title>Gradient Gen</title>
+
+    <!-- Iconos -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./img/favicon.png" />
+    <link rel="apple-touch-startup-image" href="./img/favicon.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.json" />
 
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -54,6 +75,7 @@
       <div class="area" :style="setColor"></div>
     </div>
 
+    <script src="./load.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/mountApp.js"></script>
   </body>

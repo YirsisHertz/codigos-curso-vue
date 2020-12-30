@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peticiones en Vue</title>
+
+    <style>
+      .container {
+        text-align: center;
+        width: 150px;
+        border: 2px solid black;
+        padding: 3px;
+      }
+    </style>
+
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{title}}</h1>
+      <hr />
+
+      <div class="container" v-for="dato in datos">
+        <h2>{{dato.title}} - {{dato.id}}</h2>
+        <img loading="lazy" :src="dato.thumbnailUrl" :alt="dato.id" />
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+  </body>
+</html>

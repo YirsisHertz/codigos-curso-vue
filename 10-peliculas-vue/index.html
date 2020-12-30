@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Movies</title>
+
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1 style="text-align: center">{{title}}</h1>
+
+      <hr />
+
+      <form @submit.prevent="getMovie">
+        <label>
+          Movie Name: <input type="text" v-model.trim="movieTitle" />
+        </label>
+        <input type="submit" value="Get Movie" />
+      </form>
+
+      <hr />
+      <div class="container">
+        <h3>Movie: <span style="color: crimson">{{movieData.Title}}</span></h3>
+        <h4>Year: <span style="color: green">{{movieData.Year}}</span></h4>
+        <h4>
+          Genre: <strong style="color: indigo"> {{movieData.Genre}} </strong>
+        </h4>
+        <h4>
+          Actors: <span style="color: orangered">{{movieData.Actors}}</span>
+        </h4>
+
+        <img :src="movieData.Poster" :alt="movieData.imdbID" />
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+  </body>
+</html>
