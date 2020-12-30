@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generador de Degradados para CSS en tiempo Real y hecho en el curso de Vue 3"
+    />
+
+    <title>Gradient Gen</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{title}}</h1>
+      <hr />
+
+      <form>
+        <label> Color 1: <input type="color" v-model="fcolor" /> </label>
+        <label> Color 2: <input type="color" v-model="scolor" /> </label>
+      </form>
+
+      <p>HEX 1: {{fcolor}}</p>
+      <p>HEX 2: {{scolor}}</p>
+
+      <form>
+        <label>
+          <input class="value-css" type="text" :value="setColor" />
+        </label>
+
+        <br />
+
+        <label>
+          <input type="radio" value="1" v-model.number="orientation" />
+          Right
+        </label>
+        <label>
+          <input type="radio" value="2" v-model.number="orientation" />
+          Left
+        </label>
+        <label>
+          <input type="radio" value="3" v-model.number="orientation" />
+          Top
+        </label>
+        <label>
+          <input type="radio" value="4" v-model.number="orientation" /> Bottom
+        </label>
+      </form>
+      <br />
+      <div class="area" :style="setColor"></div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+  </body>
+</html>
