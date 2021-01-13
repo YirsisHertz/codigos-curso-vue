@@ -21,7 +21,7 @@
       <h1>{{title}}</h1>
       <hr />
 
-      <div class="container" v-for="dato in datos">
+      <div class="container" v-for="dato in datos" :key="dato.id">
         <h2>{{dato.title}} - {{dato.id}}</h2>
         <img loading="lazy" :src="dato.thumbnailUrl" :alt="dato.id" />
       </div>

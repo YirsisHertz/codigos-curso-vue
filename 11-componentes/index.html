@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Componentes</title>
+
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <header-principal></header-principal>
+      <hr />
+      <lista-paises :paises="paises"></lista-paises>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./components/Header.js"></script>
+    <script src="./components/ListaPaises.js"></script>
+    <script src="./js/mountApp.js"></script>
+  </body>
+</html>
