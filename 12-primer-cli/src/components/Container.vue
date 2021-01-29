@@ -27,12 +27,10 @@ import Card from "./Card";
 import Loading from "./Loading.vue";
 
 export default {
-  data() {
-    return {
+  data: () => ({
       projects: null,
       load: false,
-    };
-  },
+    }),
   components: {
     Card,
     Loading,
